@@ -49,12 +49,24 @@
     function fallback(){var ta=el('textarea');ta.value=text;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');done()}catch(e){showToast('Could not copy')}ta.remove();}
   }
   var cb=$('contactBtns');
-  if(S.email){var m=el('a','btn primary magnetic','Email me');m.href='mailto:'+S.email;cb.appendChild(m);
-    var mc=el('button','btn magnetic','Copy email');mc.type='button';mc.onclick=function(){copy(S.email,'Email')};cb.appendChild(mc);}
-  if(S.linkedin){var li=el('a','btn magnetic','LinkedIn');li.href=S.linkedin;li.target='_blank';li.rel='noopener';cb.appendChild(li);
+  function link(cls,txt,href,blank,aria){var a=el('a',cls,txt);a.href=href;if(blank){a.target='_blank';a.rel='noopener'}if(aria)a.setAttribute('aria-label',aria);return a;}
+  var ICON={mail:'<svg viewBox="0 0 24 24"><path d="M3 6.5A2.5 2.5 0 0 1 5.5 4h13A2.5 2.5 0 0 1 21 6.5v11a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 17.5zm2 .3v.2l7 4.9 7-4.9v-.2a.8.8 0 0 0-.5-.8h-13a.8.8 0 0 0-.5.8zm14 2.6-6.4 4.5a1 1 0 0 1-1.2 0L5 9.4v8.1c0 .3.2.5.5.5h13c.3 0 .5-.2.5-.5z"/></svg>',
+    li:'<svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4v10.75H3zm6.5 0h3.8v1.5h.06c.53-1 1.83-1.75 3.44-1.75 3.68 0 4.2 2.2 4.2 5.06v5.94h-4v-5.2c0-1.3-.02-2.9-1.85-2.9-1.86 0-2.15 1.4-2.15 2.8v5.3h-4z"/></svg>',
+    gh:'<svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.1.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 5 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg>'};
+  function icons(box){ if(!box) return;
+    if(S.email){var m=link('ico glass','', 'mailto:'+S.email,false,'Email '+S.email);m.innerHTML=ICON.mail;box.appendChild(m);}
+    if(S.linkedin){var l=link('ico glass','',S.linkedin,true,'LinkedIn');l.innerHTML=ICON.li;box.appendChild(l);}
+    if(S.github){var g=link('ico glass','',S.github,true,'GitHub');g.innerHTML=ICON.gh;box.appendChild(g);} }
+  icons($('heroIcons')); icons($('footIcons'));
+  if(S.email){ cb.appendChild(link('btn primary magnetic','Email me','mailto:'+S.email));
+    cb.appendChild(link('btn magnetic','Open in Gmail','https://mail.google.com/mail/?view=cm&fs=1&to='+encodeURIComponent(S.email),true));
+    var mc=el('button','btn magnetic','Copy email');mc.type='button';mc.onclick=function(){copy(S.email,'Email')};cb.appendChild(mc);
+    var ea=link('mailaddr',S.email,'mailto:'+S.email);$('contactText').after(ea);}
+  if(S.linkedin){ cb.appendChild(link('btn magnetic','LinkedIn',S.linkedin,true));
     var lc=el('button','btn magnetic','Copy LinkedIn');lc.type='button';lc.onclick=function(){copy(S.linkedin,'LinkedIn link')};cb.appendChild(lc);}
-  if(S.github){var g=el('a','btn magnetic','GitHub');g.href=S.github;g.target='_blank';g.rel='noopener';cb.appendChild(g);}
-  if(!S.email&&!S.linkedin) $('contactText').textContent='You can find me and my code on GitHub.';
+  if(S.github) cb.appendChild(link('btn magnetic','GitHub',S.github,true));
+  if(S.email) $('contactText').textContent='Email is the easiest way to reach me. LinkedIn works too.';
+  else if(!S.linkedin) $('contactText').textContent='You can find me and my code on GitHub.';
 
   // Typing headline
   var lines=S.typing&&S.typing.length?S.typing:[S.name||''], typed=$('typed');
@@ -81,12 +93,5 @@
     b.addEventListener('pointermove',function(e){var r=b.getBoundingClientRect();
       b.style.transform='translate('+((e.clientX-r.left-r.width/2)*.25)+'px,'+((e.clientY-r.top-r.height/2)*.35)+'px)';});
     b.addEventListener('pointerleave',function(){b.style.transform='';});
-  });
-  // Tilt cards
-  document.querySelectorAll('.proj').forEach(function(c){
-    c.addEventListener('pointermove',function(e){var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;
-      c.style.transform='rotateX('+((.5-y)*6)+'deg) rotateY('+((x-.5)*6)+'deg)';
-      c.style.setProperty('--mx',x*100+'%');c.style.setProperty('--my',y*100+'%');});
-    c.addEventListener('pointerleave',function(){c.style.transform='';});
   });
 })();

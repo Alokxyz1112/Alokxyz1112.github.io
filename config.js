@@ -29,8 +29,8 @@ window.SITE = {
   ],
 
   // ---- CONTACT (leave "" to hide) ----
-  email: "",       // e.g. "yourname@gmail.com"
-  linkedin: "",    // e.g. "https://www.linkedin.com/in/your-profile"
+  email: "Alok920037@gmail.com",
+  linkedin: "https://www.linkedin.com/in/yadav-alok-0112b1311",
   github: "https://github.com/Alokxyz1112",
 
   // Your photo. Upload a file named photo.jpg into the assets folder.

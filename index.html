@@ -25,19 +25,36 @@
 <div class="glow" aria-hidden="true"></div>
 <header class="nav glass">
   <a href="#top" class="logo" aria-label="Home"><span class="navav" id="navAv"></span><span id="navLogo">AY</span></a>
-  <nav><a href="#about">About</a><a href="#now">Now</a><a href="#work">Work</a><a href="#contact">Contact</a></nav>
+  <nav><a href="#about">About</a><a href="#now">Now</a><a href="#work">Work</a><a href="#contact">Contact</a><a href="cv/" class="navcv">CV</a></nav>
 </header>
 <main id="main">
   <section class="hero" id="top">
-    <div class="avatar reveal" id="avatar"></div>
+    <div class="stage reveal" id="stage">
+      <div class="orb o1" data-depth="40" aria-hidden="true"></div><div class="orb o2" data-depth="-30" aria-hidden="true"></div>
+      <div class="ring3d" data-depth="20" aria-hidden="true"><i></i><i></i><i></i></div>
+      <div class="avatar tilt" id="avatar" data-depth="10"></div>
+    </div>
     <p class="eyebrow reveal" id="heroName"></p>
     <h1 class="reveal"><span id="typed"></span><span class="caret" aria-hidden="true"></span></h1>
     <p class="lead reveal" id="tagline"></p>
     <div class="cta reveal">
       <a class="btn primary magnetic" href="#work">See my work</a>
+      <a class="btn magnetic" href="cv/">View my CV</a>
       <a class="btn magnetic" id="ghBtn" target="_blank" rel="noopener">GitHub</a>
     </div>
+    <div class="icons reveal" id="heroIcons"></div>
   </section>
+  <section id="building" class="section"><div class="glass card build reveal tilt">
+    <span class="badge"><span class="dot"></span>In development</span>
+    <h2>Now building</h2>
+    <p>A new productivity app. Modern, fast, and built to go head to head with the big players. Chat, calls, photo sharing, timers and focus tools: the everyday things the big apps offer, built for speed.</p>
+    <p class="solo">I'm building it solo. The design, the code and the debugging are all me.</p>
+    <ol class="road">
+      <li><span class="when">Late Nov or early Dec 2026</span><span class="what">Beta testing</span></li>
+      <li><span class="when">Jan or Feb 2027</span><span class="what">Public launch</span></li>
+    </ol>
+    <a class="beta" href="mailto:Alok920037@gmail.com?subject=Early%20beta%20access">Want early beta access? Email me →</a>
+  </div></section>
   <section id="about" class="section"><h2 class="reveal">About</h2><div class="about reveal"><div class="aboutpic glass" id="aboutPic"></div><div class="glass card" id="aboutText"></div></div></section>
   <section id="now" class="section"><h2 class="reveal">Now</h2><ol class="timeline" id="timeline"></ol></section>
   <section id="work" class="section"><h2 class="reveal">Things I've built</h2><div class="grid" id="projects"></div>
@@ -45,9 +62,10 @@
   <section id="contact" class="section"><h2 class="reveal">Say hi</h2>
     <div class="glass card reveal center"><p id="contactText">The easiest way to reach me is below.</p><div class="cta" id="contactBtns"></div></div></section>
 </main>
-<footer><p>© <span id="yr"></span> <span id="footName"></span>. Made by hand.</p></footer>
+<footer><div class="icons" id="footIcons"></div><p>© <span id="yr"></span> <span id="footName"></span>. Made by hand. <a href="cv/" style="color:var(--red)">CV</a></p></footer>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 <script src="config.js"></script>
 <script src="main.js"></script>
+<script src="fx.js" defer></script>
 </body>
 </html>
