@@ -395,3 +395,90 @@ header.nav .navav img{object-position:center!important}
  .ctile .ibtn{width:42px;height:42px;min-height:42px}
 }
 header.nav .navav img,header.nav .logo img{width:100%!important;height:100%!important;min-width:0!important;display:block}
+/* v27 phone polish (mobile only) */
+.mcon{display:none}
+@media(max-width:768px){
+ main{padding:0 18px}
+ .section{padding:40px 0}
+ h2{font-size:30px;margin-bottom:20px}
+ .hero{padding:96px 0 40px;min-height:0}
+ .stage{width:200px;height:190px;margin-bottom:4px}
+ .avatar.photo{width:140px;height:140px;padding:4px;box-shadow:0 0 0 7px rgba(255,255,255,.04),0 24px 60px -12px rgba(255,59,78,.55)}
+ .eyebrow{font-size:12px;margin-bottom:8px}
+ h1{font-size:40px}
+ .lead{font-size:16px;line-height:1.55;margin-top:14px;max-width:330px}
+ .cta{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:26px;width:100%;max-width:340px}
+ .cta .btn{min-height:46px;height:46px;padding:0 12px;font-size:14.5px;width:100%}
+ .cta .btn.primary{grid-column:1/-1}
+ .hero .icons{margin-top:20px;gap:14px}
+ .ico{width:44px;height:44px}
+ .build{padding:24px 20px}
+ .build h2{margin:14px 0 10px}
+ .build p{font-size:16px;line-height:1.6}.build .solo{font-size:15px}
+ .badge{font-size:11px;padding:5px 11px}
+ .road{grid-template-columns:1fr 1fr;gap:10px;margin:20px 0 18px}
+ .road li{padding:12px 14px;border-radius:14px}.road .when{font-size:11px;line-height:1.35}.road .what{font-size:15px}
+ .beta{font-size:15px;min-height:40px}
+ .about{gap:14px}
+ .aboutpic{max-width:none;width:100%;aspect-ratio:4/3;padding:6px}
+ .aboutpic img{object-position:center 28%}
+ #aboutText{padding:22px 20px}
+ #aboutText p{font-size:16px;line-height:1.65}#aboutText p+p{margin-top:12px}
+ .timeline{padding-left:26px}.timeline:before{left:6px}
+ .timeline li{padding:16px 18px;margin-bottom:12px}.timeline li:before{left:-25px;top:22px;width:10px;height:10px}
+ .timeline h3{font-size:17px}.timeline p{font-size:15px;line-height:1.55}
+ .grid{gap:14px}
+ .proj,.proj.featured{padding:22px 20px}
+ .proj h3,.proj.featured h3{font-size:22px}
+ .proj p,.proj.featured p{font-size:15.5px;line-height:1.6;margin:8px 0 14px}
+ .tags{margin-bottom:14px}
+ .links{gap:8px}.links .btn{flex:1 1 0;min-width:0;padding:0 14px;font-size:14px;height:44px}
+ .sub{font-size:18px;margin:40px 0 12px}
+ .tools{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+ .tool{padding:16px 6px 13px;gap:9px;border-radius:16px}
+ .tico,.tico img{width:36px!important;height:36px!important}
+ .tico img.lg-javascript{width:30px!important;height:30px!important;margin:3px}
+ .tico img.lg-git{width:33px!important;height:33px!important;margin:1.5px}
+ .tname{font-size:13px}
+ #contact{padding-top:36px}
+ .chead{margin-bottom:8px}
+ .cbig{font-size:52px;margin:6px 0 12px}
+ .csub{font-size:15.5px;max-width:300px;line-height:1.55}
+ .cgrid{display:none}
+ .mcon{display:flex;justify-content:space-around;align-items:flex-start;max-width:340px;margin:18px auto 0;padding:14px 0 4px}
+ .mc{display:flex;flex-direction:column;align-items:center;gap:12px;min-width:88px;padding:10px 4px;border-radius:20px;-webkit-tap-highlight-color:transparent;transition:transform .2s ease}
+ .mc:active{transform:scale(.94)}
+ .mcg{position:relative;width:64px;height:64px;display:grid;place-items:center}
+ .mcg::before{content:"";position:absolute;inset:-14px;border-radius:50%;background:radial-gradient(closest-side,rgba(var(--tg),.42),rgba(var(--tg),.12) 55%,transparent);filter:blur(10px);pointer-events:none}
+ .mcg img{position:relative;width:52px;height:52px;object-fit:contain;filter:drop-shadow(0 6px 14px rgba(var(--tg),.45))}
+ .mc-gh .mcg::before{background:radial-gradient(closest-side,rgba(var(--tg),.26),rgba(var(--tg),.07) 55%,transparent)}
+ .mcl{font-size:14px;font-weight:600;color:#e5e5ea;letter-spacing:.01em}
+ .cdl{margin-top:22px}
+ .cdlink{justify-content:center;min-height:50px;padding:0 24px;border:1px solid rgba(255,59,78,.45);border-radius:999px;background:rgba(255,59,78,.10);font-size:15px}
+ footer{padding:28px 18px 44px;font-size:13px;line-height:1.7}
+ footer .icons{gap:12px;margin-bottom:12px}
+ .cvhead{padding:96px 0 8px;gap:16px;flex-direction:column;align-items:center;text-align:center}
+ .cvhead>div:not(.cvpic){width:100%}
+ .licard .lipic{flex:0 0 64px;width:64px;height:64px}.licard .liurl{font-size:12px;word-break:normal;overflow-wrap:anywhere}.licard .libody{gap:14px}
+ .cvpic{width:112px;height:112px;box-shadow:0 0 0 6px rgba(255,255,255,.04),0 20px 50px -12px rgba(255,59,78,.55)}
+ .cvhead h1{font-size:40px}
+ .cvhead .lead{text-align:center!important;margin:10px auto 0!important;font-size:15.5px}
+ .cvhead .cta{justify-content:center!important;margin:18px auto 0!important}
+ .cvhead p.noprint{text-align:center}
+ .mailaddr{font-size:16px!important}
+ .licard{padding:20px;margin-top:4px}
+ .card{padding:22px 20px}
+ .card h3{font-size:18px}
+ .card ul.list li{font-size:15px}
+ p.place{font-size:14.5px}
+ .skillgrid{grid-template-columns:1fr;gap:14px}
+ .skg .chips{gap:8px}.skg .chips li{padding:7px 12px;font-size:13.5px}
+}
+@media(max-width:374px){
+ main{padding:0 16px}
+ h1,.cvhead h1{font-size:36px}
+ .cbig{font-size:46px}
+ .cta .btn{font-size:13.5px;padding:0 8px}
+ .mc{min-width:80px}.mcg{width:58px;height:58px}.mcg img{width:46px;height:46px}
+ .road{grid-template-columns:1fr}
+}
