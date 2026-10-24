@@ -6,12 +6,10 @@
   var SEL='.tilt,.bt,.ctile,.licard,.tool,.proj,.card,.skg,.timeline li',MAX=6,PERS=900;
   function bind(c){ if(c.__tilt||c.closest('.nav')) return; c.__tilt=1; c.classList.add('fxt');
     var max=c.classList.contains('avatar')?14:MAX, sh=document.createElement('span'); sh.className='fxsheen'; sh.setAttribute('aria-hidden','true'); c.appendChild(sh);
-    var pop=c.querySelector('.phone');
     c.addEventListener('pointermove',function(e){var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;
       c.style.transform='perspective('+PERS+'px) rotateX('+((.5-y)*max)+'deg) rotateY('+((x-.5)*max)+'deg) translateZ(0)';
-      c.style.setProperty('--mx',x*100+'%');c.style.setProperty('--my',y*100+'%');c.classList.add('fxon');
-      if(pop) pop.style.transform='perspective('+PERS+'px) translateZ(34px) translate('+((x-.5)*8)+'px,'+((y-.5)*8)+'px)';});
-    c.addEventListener('pointerleave',function(){c.style.transform='';c.classList.remove('fxon');if(pop)pop.style.transform='';});
+      c.style.setProperty('--mx',x*100+'%');c.style.setProperty('--my',y*100+'%');c.classList.add('fxon');});
+    c.addEventListener('pointerleave',function(){c.style.transform='';c.classList.remove('fxon');});
   }
   window.fxTilt=function(root){ if(touch) return; (root||document).querySelectorAll(SEL).forEach(bind); };
   window.fxTilt();
