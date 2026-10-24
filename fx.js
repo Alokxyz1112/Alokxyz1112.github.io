@@ -1,6 +1,11 @@
 /* fx.js: 3D tilt, parallax depth and scroll depth. Shared by home and CV pages. */
 (function(){
   var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches, touch=matchMedia('(hover: none)').matches;
+  // Active nav state (scrollspy), runs regardless of motion settings
+  (function(){var links=[].slice.call(document.querySelectorAll('header.nav a[href^="#"]')).filter(function(a){return a.getAttribute('href').length>1&&document.querySelector(a.getAttribute('href'))});
+    if(!links.length) return; function upd(){var y=innerHeight*.35,cur=null;links.forEach(function(a){var t=document.querySelector(a.getAttribute('href')).getBoundingClientRect();if(t.top<=y&&t.bottom>y)cur=a;});
+      links.forEach(function(a){var on=a===cur;a.classList.toggle('active',on);if(on)a.setAttribute('aria-current','true');else a.removeAttribute('aria-current');});}
+    addEventListener('scroll',upd,{passive:true});upd();})();
   if(reduce){window.fxTilt=function(){};return;}
   // Shared tilt + sheen utility (pointer devices only). window.fxTilt(root) binds any new cards.
   var SEL='.tilt,.bt,.ctile,.licard,.tool,.proj,.card,.skg,.timeline li',MAX=6,PERS=900;

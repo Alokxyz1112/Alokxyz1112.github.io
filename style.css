@@ -326,3 +326,20 @@ header.nav>nav>a.navcv{padding:0 16px;font-weight:600}
 .hlab span:first-child{margin-right:0}
 .hlab .leg{display:inline-flex;align-items:center;gap:4px}
 @media(max-width:700px){.tview{width:160px;height:160px}.tnum{font-size:38px}}
+/* consistency audit */
+html{scroll-padding-top:96px}section[id]{scroll-margin-top:96px}
+.glass.card,.proj,.ctile,.licard,.bt,.aboutpic,.skg,.timeline li,.nbpanel{border-radius:24px}
+.tool{border-radius:18px}
+.bt h3,.ctile h3,.proj h3,.card h3,.skg h3{font-size:20px;line-height:1.3}
+.btn{min-height:48px;padding-top:0;padding-bottom:0;justify-content:center}
+.links .btn,.cact .btn{min-height:44px;padding-top:0;padding-bottom:0}
+header.nav a.active:not(.logo){background:rgba(255,255,255,.10);color:var(--fg)}
+a:focus-visible,button:focus-visible,.btn:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--red);outline-offset:3px;border-radius:12px}
+h1,h2,h3{text-wrap:balance}p{text-wrap:pretty}
+@media(max-width:700px){
+ header.nav a{min-height:44px}header.nav .logo,.navav{width:44px;height:44px}
+ .beta,.caddr,.mailaddr,.liurl,.road2 a,.cvhead p a{display:inline-flex;align-items:center;min-height:44px}
+}
+html{scroll-padding-top:24px}section[id]{scroll-margin-top:24px}
+@media(max-width:700px){header.nav a.logo{min-width:44px;justify-content:center;display:inline-flex;align-items:center}.cvhead .logo,header.nav .logo img{min-width:44px}}
+.links .btn,.cact .btn{height:44px}
