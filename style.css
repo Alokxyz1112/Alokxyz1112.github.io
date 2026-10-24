@@ -135,3 +135,9 @@ footer .icons{margin:0 0 16px}
 .feat h3{font-size:16px;letter-spacing:-.01em}.build .feat p{font-size:14px;color:var(--mute);margin-top:4px}
 @media (max-width:900px){.feats{grid-template-columns:1fr 1fr}}
 @media (max-width:500px){.feats{grid-template-columns:1fr}}
+/* CV header photo: same round treatment as home */
+.cvhead{padding:120px 0 20px;align-items:center}
+.cvpic{flex:0 0 auto;width:140px;height:140px;border-radius:50%;padding:5px;background:conic-gradient(from 210deg,var(--red),rgba(255,255,255,.35),#6b0a18,var(--red));box-shadow:0 0 0 8px rgba(255,255,255,.04),0 24px 60px -10px rgba(255,59,78,.55);transition:transform .3s}
+.cvpic img{display:block;width:100%!important;height:100%!important;border-radius:50%;object-fit:cover;object-position:center 30%;border:3px solid #0a0a0b;padding:0;background:none}
+.avatar img,.aboutpic img,.navav img{object-position:center 30%}
+@media (max-width:700px){.cvhead{padding-top:104px;gap:20px}.cvpic{width:120px;height:120px}}

@@ -13,19 +13,19 @@ window.SITE = {
   // Lines the headline types out, one after another
   typing: [
     "I build apps.",
-    "I'm learning AI.",
-    "I'm starting a company.",
-    "I study biotech."
+    "I study biotech.",
+    "I play with AI.",
+    "I'm starting something."
   ],
 
   // One line under your name
-  tagline: "Third-year B.Tech Biotechnology student. Working on AI and building my own startup.",
+  tagline: "I'm a third-year biotech student. I spend my free time on AI, apps, and a startup of my own.",
 
   // About section. Each item is one paragraph.
   about: [
-    "I'm in my third year of B.Tech in Biotechnology. Somewhere along the way I got hooked on writing code, and now most of my free time goes into building things.",
-    "Right now I'm working on AI and on a startup of my own. It's early days, so there's not much to say yet, but it's what I think about most.",
-    "I like apps that feel clean and get out of your way. Biology and software overlap more than people think, which is why bioinformatics keeps pulling me in."
+    "Hey, I'm Alok. I'm in my third year of B.Tech Biotechnology. At some point I started writing code, and I never really stopped.",
+    "These days it's mostly AI and a startup I'm building. It's early. There's not much to show yet, but it's what I think about most.",
+    "I like apps that look clean and stay out of your way. I also love the spot where biology meets code. That's why bioinformatics keeps pulling me in."
   ],
 
   // ---- CONTACT (leave "" to hide) ----
@@ -39,10 +39,10 @@ window.SITE = {
 
   // ---- WHAT I'M DOING NOW (timeline) ----
   now: [
-    { title: "B.Tech Biotechnology", text: "Third year. Genetics, cells, lab work, and the occasional all-nighter." },
-    { title: "AI", text: "Learning and building with AI, one small project at a time." },
-    { title: "My startup", text: "Early days. Still unnamed. Working on it quietly." },
-    { title: "Hobee", text: "My Android app, built in Flutter and shipped on GitHub." }
+    { title: "B.Tech Biotechnology", text: "Third year. Genes, cells, lab work, and a few late nights." },
+    { title: "AI", text: "Learning by building. One small project at a time." },
+    { title: "My startup", text: "Early days. No name yet. I'm working on it quietly." },
+    { title: "Hobee", text: "My Android app. I built it in Flutter and put it on GitHub." }
   ],
 
   // ---- SKILLS ----
@@ -54,7 +54,7 @@ window.SITE = {
     {
       name: "Hobee",
       featured: true,
-      text: "An ad-free Reddit gallery app for Android. Deep Search looks through live posts and archives, a filter hides duplicate photos, and downloads come in original quality. All wrapped in a glass UI.",
+      text: "I wanted a Reddit gallery with no ads, so I made one. It searches live posts and old archives. It hides duplicate photos. It saves images in full quality. And it has a glass look I really like.",
       tags: ["Flutter", "Dart", "Android"],
       link: "https://github.com/Alokxyz1112/hobee",
       extraLink: "https://github.com/Alokxyz1112/hobee/releases/latest",
@@ -62,13 +62,13 @@ window.SITE = {
     },
     {
       name: "biofx_python",
-      text: "My fork of a bioinformatics-in-Python project. Where I practise the overlap between biology and code.",
+      text: "My fork of the code from Mastering Python for Bioinformatics. It's where I practise biology with Python.",
       tags: ["Python", "Bioinformatics"],
       link: "https://github.com/Alokxyz1112/biofx_python"
     },
     {
       name: "Happy Birthday Card",
-      text: "A small animated birthday card for the web, based on Anshuman Mahato's project.",
+      text: "A little animated birthday card for the web. I based it on Anshuman Mahato's project.",
       tags: ["HTML", "CSS", "JavaScript"],
       link: "https://github.com/Alokxyz1112/Happy-Birthday-Card"
     }
