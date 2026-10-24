@@ -12,7 +12,7 @@ window.SITE = {
 
   // Lines the headline types out, one after another
   typing: [
-    "Half cells, half code.",
+    "Always starting something.",
     "Late nights, new apps.",
     "Curious about everything.",
     "One commit at a time."
