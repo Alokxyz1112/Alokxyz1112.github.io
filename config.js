@@ -39,7 +39,7 @@ window.SITE = {
 
   // ---- WHAT I'M DOING NOW (timeline) ----
   now: [
-    { title: "B.Tech Biotechnology", text: "Third year. Genes, cells, lab work, and a few late nights." },
+    { title: "B.Tech Biotechnology", text: "Third year at ANDUAT. Genes, cells, code, and a few late nights." },
     { title: "AI", text: "Learning by building. One small project at a time." },
     { title: "My startup", text: "Early days. No name yet. I'm working on it quietly." },
     { title: "Hobee", text: "My Android app. I built it in Flutter and put it on GitHub." }
