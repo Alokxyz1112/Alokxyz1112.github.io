@@ -298,3 +298,11 @@ header.nav>nav>a.navcv{padding:0 16px;font-weight:600}
 @media(max-width:1000px){.tog{grid-template-columns:1fr}.sws{grid-template-columns:repeat(6,minmax(0,1fr))}}
 @media(max-width:700px){.bt{padding:22px}.sws{grid-template-columns:repeat(6,minmax(0,1fr));gap:8px}.sw{aspect-ratio:1}.tog{grid-template-columns:1fr}}
 .tog b{width:38px;height:22px;display:block}
+/* shared tilt */
+.fxt{transition:transform .45s cubic-bezier(.2,.8,.2,1);will-change:transform;position:relative}
+.fxt.fxon{transition:transform .12s ease-out}
+.fxsheen{position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .4s ease;background:radial-gradient(420px circle at var(--mx,50%) var(--my,50%),rgba(255,255,255,.10),transparent 55%);z-index:2}
+.fxt.fxon .fxsheen{opacity:1}
+.phone{transition:transform .45s cubic-bezier(.2,.8,.2,1)}
+.fxt.fxon .phone{transition:transform .12s ease-out}
+@media print{.fxsheen{display:none}}

@@ -1,15 +1,21 @@
 /* fx.js: 3D tilt, parallax depth and scroll depth. Shared by home and CV pages. */
 (function(){
   var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches, touch=matchMedia('(hover: none)').matches;
-  if(reduce) return;
-  // Tilt (pointer devices only)
-  if(!touch) document.querySelectorAll('.tilt,.proj,.skg,.timeline li,.grid2 .card').forEach(function(c){
-    var max=c.classList.contains('avatar')?14:6;
+  if(reduce){window.fxTilt=function(){};return;}
+  // Shared tilt + sheen utility (pointer devices only). window.fxTilt(root) binds any new cards.
+  var SEL='.tilt,.bt,.ctile,.licard,.tool,.proj,.card,.skg,.timeline li',MAX=6,PERS=900;
+  function bind(c){ if(c.__tilt||c.closest('.nav')) return; c.__tilt=1; c.classList.add('fxt');
+    var max=c.classList.contains('avatar')?14:MAX, sh=document.createElement('span'); sh.className='fxsheen'; sh.setAttribute('aria-hidden','true'); c.appendChild(sh);
+    var pop=c.querySelector('.phone');
     c.addEventListener('pointermove',function(e){var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;
-      c.style.transform='perspective(900px) rotateX('+((.5-y)*max)+'deg) rotateY('+((x-.5)*max)+'deg) translateZ(0)';
-      c.style.setProperty('--mx',x*100+'%');c.style.setProperty('--my',y*100+'%');});
-    c.addEventListener('pointerleave',function(){c.style.transform='';});
-  });
+      c.style.transform='perspective('+PERS+'px) rotateX('+((.5-y)*max)+'deg) rotateY('+((x-.5)*max)+'deg) translateZ(0)';
+      c.style.setProperty('--mx',x*100+'%');c.style.setProperty('--my',y*100+'%');c.classList.add('fxon');
+      if(pop) pop.style.transform='perspective('+PERS+'px) translateZ(34px) translate('+((x-.5)*8)+'px,'+((y-.5)*8)+'px)';});
+    c.addEventListener('pointerleave',function(){c.style.transform='';c.classList.remove('fxon');if(pop)pop.style.transform='';});
+  }
+  window.fxTilt=function(root){ if(touch) return; (root||document).querySelectorAll(SEL).forEach(bind); };
+  window.fxTilt();
+  if(!touch) new MutationObserver(function(m){m.forEach(function(r){r.addedNodes.forEach(function(n){if(n.nodeType!==1)return; if(n.matches&&n.matches(SEL))bind(n); window.fxTilt(n);});});}).observe(document.body,{childList:true,subtree:true});
   // Hero parallax layers
   var stage=document.getElementById('stage');
   // Scroll depth: sections ease in from slight depth
