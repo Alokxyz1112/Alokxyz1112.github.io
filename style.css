@@ -482,3 +482,5 @@ header.nav .navav img,header.nav .logo img{width:100%!important;height:100%!impo
  .mc{min-width:80px}.mcg{width:58px;height:58px}.mcg img{width:46px;height:46px}
  .road{grid-template-columns:1fr}
 }
+#projects>.proj:not(.featured):last-child:nth-child(even){grid-column:1/-1}
+#projects .grid2>div:last-child:nth-child(odd){grid-column:1/-1}

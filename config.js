@@ -65,12 +65,6 @@ window.SITE = {
       text: "My fork of the code from Mastering Python for Bioinformatics. It's where I practise biology with Python.",
       tags: ["Python", "Bioinformatics"],
       link: "https://github.com/Alokxyz1112/biofx_python"
-    },
-    {
-      name: "Happy Birthday Card",
-      text: "A little animated birthday card for the web. I based it on Anshuman Mahato's project.",
-      tags: ["HTML", "CSS", "JavaScript"],
-      link: "https://github.com/Alokxyz1112/Happy-Birthday-Card"
     }
   ]
 };

@@ -45,3 +45,4 @@ p{margin:0!important}.cvhead .lead{margin-top:3pt!important}.pcontact{margin-top
 .section{margin-bottom:8pt!important}
 .skillgrid{gap:3pt 16pt!important}.grid2{gap:5pt 16pt!important}.timeline{gap:4pt 16pt!important}
 .skg h3:after{content:": "}.skg .chips{display:inline!important}
+#projects .grid2>div:last-child:nth-child(odd){grid-column:1/-1!important}
