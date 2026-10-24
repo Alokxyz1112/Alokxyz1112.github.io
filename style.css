@@ -314,3 +314,15 @@ header.nav>nav>a.navcv{padding:0 16px;font-weight:600}
 .nbfeat li{padding:14px 0;border-top:1px solid rgba(255,255,255,.08);font-size:15.5px;line-height:1.5;color:rgba(255,255,255,.86)}
 .nbpanel .road2{margin-top:40px;padding-top:32px;border-top:1px solid rgba(255,255,255,.08)}
 @media(max-width:700px){.nbpanel{padding:26px 22px;margin-top:28px}.nbfeat{grid-template-columns:1fr}.nbfeat li{font-size:15px;padding:12px 0}}
+/* timer tile, no device */
+.b-phone{justify-content:space-between;align-items:stretch}
+.tview{position:relative;width:200px;height:200px;align-self:center;margin:18px 0 8px}
+.tview svg{width:100%;height:100%;transform:rotate(-90deg)}
+.tview circle{fill:none;stroke-width:3}
+.tview .trk{stroke:rgba(255,255,255,.08)}
+.tview .prg{stroke:var(--red);stroke-linecap:round;stroke-dasharray:351.9;stroke-dashoffset:89}
+.tnum{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:46px;font-weight:600;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.hlab{justify-content:space-between}
+.hlab span:first-child{margin-right:0}
+.hlab .leg{display:inline-flex;align-items:center;gap:4px}
+@media(max-width:700px){.tview{width:160px;height:160px}.tnum{font-size:38px}}
