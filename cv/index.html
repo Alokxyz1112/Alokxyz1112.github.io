@@ -18,7 +18,8 @@
 <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png?v=4">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../style.css?v=15">
+<link rel="stylesheet" href="../style.css?v=17">
+<link rel="stylesheet" href="print.css?v=1" media="print">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -30,18 +31,19 @@
 </header>
 <main id="main">
   <section class="cvhead">
-    <div class="cvpic tilt"><img src="../assets/photo.jpg" alt="Yadav Alok" width="140" height="140" onerror="this.parentNode.remove()"></div>
+    <div class="cvpic tilt"><img src="../assets/avatar-small.jpg?v=1" alt="Yadav Alok" width="140" height="140" onerror="this.parentNode.remove()"></div>
     <div>
       <p class="eyebrow">Curriculum vitae</p>
       <h1>Yadav Alok</h1>
       <p class="lead" style="margin:10px 0 0;text-align:left">B.Tech Biotechnology student. Bioinformatics and computational biology.</p>
-      <p style="margin-top:8px"><a class="mailaddr" style="font-size:17px" href="mailto:Alok920037@gmail.com">Alok920037@gmail.com</a></p>
+      <p class="pcontact printonly"><a href="mailto:Alok920037@gmail.com">Alok920037@gmail.com</a> <span>·</span> <a href="https://www.linkedin.com/in/yadav-alok-0112b1311">linkedin.com/in/yadav-alok-0112b1311</a> <span>·</span> <a href="https://github.com/Alokxyz1112">github.com/Alokxyz1112</a> <span>·</span> <a href="https://alokxyz1112.github.io">alokxyz1112.github.io</a></p>
+      <p class="noprint" style="margin-top:8px"><a class="mailaddr" style="font-size:17px" href="mailto:Alok920037@gmail.com">Alok920037@gmail.com</a></p>
       <div class="cta noprint" style="justify-content:flex-start;margin-top:22px">
         <a class="btn primary magnetic" href="mailto:Alok920037@gmail.com">Email</a>
         <a class="btn magnetic" href="https://mail.google.com/mail/?view=cm&fs=1&to=Alok920037@gmail.com" target="_blank" rel="noopener">Open in Gmail</a>
         <a class="btn magnetic" href="https://www.linkedin.com/in/yadav-alok-0112b1311" target="_blank" rel="noopener">LinkedIn</a>
         <a class="btn magnetic" href="https://github.com/Alokxyz1112" target="_blank" rel="noopener">GitHub</a>
-        <button class="btn magnetic" type="button" onclick="print()">Print / Save PDF</button>
+        <a class="btn magnetic" href="Yadav-Alok-CV.pdf" download="Yadav-Alok-CV.pdf">Download CV</a>
       </div>
     </div>
   <div class="noprint" style="margin-top:28px"><div class="licard glass tilt reveal"><div class="litop"><span class="lilogo"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></span><span class="lilab">LinkedIn</span></div><div class="libody"><div class="lipic"><img src="../assets/avatar-small.jpg?v=1" alt="Yadav Alok" loading="lazy"></div><div><div class="liname">Yadav Alok</div><div class="lihead">B.Tech Biotechnology · Bioinformatics &amp; Computational Biology</div><a class="liurl" href="https://www.linkedin.com/in/yadav-alok-0112b1311" target="_blank" rel="noopener">linkedin.com/in/yadav-alok-0112b1311</a></div></div><a class="btn libtn magnetic" href="https://www.linkedin.com/in/yadav-alok-0112b1311" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>Connect on LinkedIn</a></div></div></section>
@@ -91,6 +93,6 @@ if(matchMedia('(hover: none)').matches)return;var g=document.querySelector('.glo
 addEventListener('pointermove',function(e){g.style.left=e.clientX+'px';g.style.top=e.clientY+'px'},{passive:true});
 document.querySelectorAll('.magnetic').forEach(function(b){b.addEventListener('pointermove',function(e){var q=b.getBoundingClientRect();b.style.transform='translate('+((e.clientX-q.left-q.width/2)*.25)+'px,'+((e.clientY-q.top-q.height/2)*.35)+'px)'});b.addEventListener('pointerleave',function(){b.style.transform=''})});})();
 </script>
-<script src="../fx.js?v=15" defer></script>
+<script src="../fx.js?v=17" defer></script>
 </body>
 </html>

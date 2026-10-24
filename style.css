@@ -262,3 +262,4 @@ header.nav>nav>a{display:inline-flex;align-items:center;justify-content:center;h
 header.nav>nav>a.navcv{padding:0 16px;font-weight:600}
 @media(max-width:700px){header.nav>nav>a{padding:0 9px;font-size:13px}header.nav>nav>a.navcv{padding:0 12px}}
 @media(max-width:380px){header.nav>nav>a{padding:0 7px;font-size:12.5px}}
+.printonly{display:none}
