@@ -18,7 +18,7 @@
 <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png?v=2">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../style.css?v=9">
+<link rel="stylesheet" href="../style.css?v=11">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -50,7 +50,7 @@
     <div class="glass card reveal" id="aboutText"><p>Hi, I'm Alok. I study B.Tech Biotechnology at ANDUAT, Ayodhya, and the part I enjoy most is the computer side of biology. That's bioinformatics and computational biology, and it's where I want to go.</p><p>In July 2026 I spent ten days at ICAR NBFGR in Lucknow learning bioinformatics tools and databases, and it made me even more sure this is what I want to do.</p><p>I use AI a lot when I research. It helps me get through papers, poke at datasets and keep my notes clean. I also build apps. Hobee is my Android app, and I'm working on a new focus app for students right now. On the side, I'm part of a small team building a youth-led healthcare accessibility platform. It's still in progress.</p></div></section>
 
   <section class="section" id="education"><h2 class="reveal">Education</h2>
-    <div class="glass card reveal"><div class="step">2024 to present</div><h3>B.Tech Biotechnology</h3><p class="place">Acharya Narendra Deva University of Agriculture and Technology (ANDUAT), Ayodhya</p><p class="muted">Second year. My focus is bioinformatics and computational biology.</p></div></section>
+    <div class="glass card reveal"><div class="step">2024 to present</div><h3>B.Tech Biotechnology</h3><p class="place">Acharya Narendra Deva University of Agriculture and Technology (ANDUAT), Ayodhya</p><p class="muted">Third year. My focus is bioinformatics and computational biology.</p></div></section>
 
   <section class="section" id="training"><h2 class="reveal">Training</h2>
     <div class="glass card reveal"><div class="step">7 to 16 July 2026</div><h3>Bioinformatics for Beginners: Tools, Databases and Applications</h3><p class="place">ICAR National Bureau of Fish Genetic Resources (NBFGR), Lucknow</p>
@@ -85,12 +85,12 @@
 (function(){var r=matchMedia('(prefers-reduced-motion: reduce)').matches,rs=document.querySelectorAll('.reveal');
 document.getElementById('yr').textContent=new Date().getFullYear();
 if(r||!('IntersectionObserver' in window)){rs.forEach(function(e){e.classList.add('in')});return;}
-var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});rs.forEach(function(e){io.observe(e)});
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:0,rootMargin:"0px 0px -40px 0px"});rs.forEach(function(e){io.observe(e)});
 addEventListener('beforeprint',function(){rs.forEach(function(e){e.classList.add('in')})});
 if(matchMedia('(hover: none)').matches)return;var g=document.querySelector('.glow');
 addEventListener('pointermove',function(e){g.style.left=e.clientX+'px';g.style.top=e.clientY+'px'},{passive:true});
 document.querySelectorAll('.magnetic').forEach(function(b){b.addEventListener('pointermove',function(e){var q=b.getBoundingClientRect();b.style.transform='translate('+((e.clientX-q.left-q.width/2)*.25)+'px,'+((e.clientY-q.top-q.height/2)*.35)+'px)'});b.addEventListener('pointerleave',function(){b.style.transform=''})});})();
 </script>
-<script src="../fx.js?v=9" defer></script>
+<script src="../fx.js?v=11" defer></script>
 </body>
 </html>

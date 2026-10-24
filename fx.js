@@ -16,7 +16,7 @@
   var secs=document.querySelectorAll('.section'), tick=false;
   function onScroll(){tick=false;var vh=innerHeight;
     secs.forEach(function(s){var r=s.getBoundingClientRect(),p=Math.max(-1,Math.min(1,(r.top+r.height/2-vh/2)/vh));
-      s.style.transform='perspective(1200px) translateZ('+(-Math.abs(p)*(touch?20:60))+'px) rotateX('+(p*(touch?0:4))+'deg)';});
+      s.style.transform='perspective(1200px) translateZ('+(-Math.abs(p)*(touch?8:20))+'px) rotateX('+(p*(touch?0:1.5))+'deg)';});
     if(stage){var y=scrollY;stage.style.transform='translateY('+(y*.25)+'px) scale('+Math.max(.85,1-y/3000)+')';stage.style.opacity=Math.max(0,1-y/700);}
   }
   addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(onScroll)}},{passive:true}); onScroll();
