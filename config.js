@@ -54,7 +54,7 @@ window.SITE = {
     {
       name: "Hobee",
       featured: true,
-      text: "It's a Reddit app for text posts too, not just images. Ever check someone's profile for context and find the same post cross-posted to ten subreddits? Hobee hides the repeats so the profile is easy to read. Open any public profile, read posts cleanly, all in a frosted glass look.",
+      text: "I wanted a Reddit gallery with no ads, so I made one. It searches live posts and old archives. It hides duplicate photos. It saves images in full quality. And it has a glass look I really like.",
       tags: ["Flutter", "Dart", "Android"],
       link: "https://github.com/Alokxyz1112/hobee",
       extraLink: "https://github.com/Alokxyz1112/hobee/releases/latest",
