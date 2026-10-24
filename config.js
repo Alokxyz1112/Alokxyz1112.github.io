@@ -12,14 +12,14 @@ window.SITE = {
 
   // Lines the headline types out, one after another
   typing: [
-    "I build apps.",
-    "I study biotech.",
-    "I play with AI.",
-    "I'm starting something."
+    "Half cells, half code.",
+    "Late nights, new apps.",
+    "Curious about everything.",
+    "One commit at a time."
   ],
 
   // One line under your name
-  tagline: "I'm a third-year biotech student. I spend my free time on AI, apps, and a startup of my own.",
+  tagline: "Third year biotech student at ANDUAT Ayodhya. After class, my ideas tend to turn into Flutter apps.",
 
   // About section. Each item is one paragraph.
   about: [
