@@ -14,7 +14,7 @@
   var av = $('avatar'); av.textContent = S.initials || 'AY';
   if (S.photo) { var img = new Image(); img.alt = S.name || '';
     img.onload = function(){ av.textContent=''; av.classList.add('photo'); av.appendChild(img);
-      var n=$('navAv'); var ni=document.createElement('img');ni.src='assets/avatar-small.jpg?v=1';ni.alt='';n.appendChild(ni); n.classList.add('on'); $('navLogo').style.display='none';
+      var n=$('navAv'); var ni=document.createElement('img');ni.src='assets/nav-avatar.jpg?v=1';ni.alt='';ni.width=64;ni.height=64;n.appendChild(ni); n.classList.add('on'); $('navLogo').style.display='none';
       var a=img.cloneNode(); a.loading='lazy'; $('aboutPic').appendChild(a); };
     img.onerror = function(){ $('aboutPic').classList.add('none'); $('aboutPic').parentNode.classList.add('nopic'); };
     img.src = S.photo; } else { $('aboutPic').classList.add('none'); $('aboutPic').parentNode.classList.add('nopic'); }
