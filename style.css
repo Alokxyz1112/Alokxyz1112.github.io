@@ -182,3 +182,4 @@ footer .icons{margin:0 0 16px}
 .ibtn:hover{background:rgba(255,255,255,.14);transform:scale(1.06)}.ibtn svg{width:18px;height:18px}
 @media(max-width:1100px){.cgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.ctile.t-gh{grid-column:1/-1}}
 @media(max-width:700px){.cgrid{grid-template-columns:1fr}.ctile{padding:22px}}
+.logo .mark{width:28px;height:28px;display:block;filter:drop-shadow(0 4px 10px rgba(255,59,78,.45))}
