@@ -347,3 +347,12 @@ html{scroll-padding-top:24px}section[id]{scroll-margin-top:24px}
 .cdl{text-align:center;margin-top:28px}
 .cdlink{display:inline-flex;align-items:center;gap:8px;min-height:44px;font-weight:600;color:var(--fg);border-bottom:1px solid rgba(255,59,78,.6)}.cdlink:hover{color:var(--red)}
 .fdl{color:var(--red)}
+/* tools: real logos, no reflection */
+.tool::before,.tool::after{display:none!important;content:none!important}
+.tool .fxsheen{display:none}
+.tico{width:48px;height:48px;border:0;background:none;box-shadow:none;border-radius:0;position:relative}
+.tico::before{content:"";position:absolute;inset:-6px;border-radius:50%;background:radial-gradient(closest-side,rgba(var(--tg),.22),transparent);filter:blur(8px);z-index:0}
+.tico img{position:relative;z-index:1;width:48px;height:48px;object-fit:contain;display:block}
+.tico img.lg-javascript{width:40px;height:40px;border-radius:6px;margin:4px}
+.tico img.lg-git{width:44px;height:44px;margin:2px}
+@media(max-width:700px){.tico,.tico img{width:40px;height:40px}.tico img.lg-javascript{width:34px;height:34px;margin:3px}.tico img.lg-git{width:37px;height:37px;margin:1.5px}}
