@@ -252,3 +252,4 @@ footer .icons{margin:0 0 16px}
 .b-theme>div:first-child{flex:0 0 auto;max-width:300px}
 @media(min-width:1001px){.sws{flex-wrap:nowrap}.sw{width:34px;height:34px}}
 .heat{max-width:230px;gap:4px}
+.lipic img,.navav img,.logo .navface{object-fit:cover;object-position:center}
