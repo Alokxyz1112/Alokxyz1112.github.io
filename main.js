@@ -21,7 +21,7 @@
 
   var gh = $('ghBtn'); if (S.github) gh.href = S.github; else gh.remove();
 
-  (S.about||[]).forEach(function(p){ $('aboutText').appendChild(el('p',null,p)); });
+  (S.about||[]).forEach(function(p){ var q=el('p');q.innerHTML=p;$('aboutText').appendChild(q); });
 
   (S.now||[]).forEach(function(n,i){ var li=el('li','glass reveal');
     li.appendChild(el('div','step','0'+(i+1))); li.appendChild(el('h3',null,n.title)); li.appendChild(el('p',null,n.text));

@@ -23,9 +23,9 @@ window.SITE = {
 
   // About section. Each item is one paragraph.
   about: [
-    "Hey, I'm Alok. I'm in my third year of B.Tech Biotechnology. At some point I started writing code, and I never really stopped.",
-    "These days it's mostly AI and a startup I'm building. It's early. There's not much to show yet, but it's what I think about most.",
-    "I like apps that look clean and stay out of your way. I also love the spot where biology meets code. That's why bioinformatics keeps pulling me in."
+    "I'm Alok, and I like turning ideas into things people actually use. Right now most of my time goes into a bigger project I can't name just yet, so you'll have to wait for that one.",
+    "Next up is a healthcare startup, and I'm looking for people. If you understand how hospital partnerships work and how a new team can get in the door, I'd love to talk. Same if you're a developer who's strong on both backend and frontend and loves solving tricky problems. <a href=\"mailto:Alok920037@gmail.com\" style=\"text-decoration:underline\">Drop me an email</a>.",
+    "Hobee is an older project of mine. I'd put it on pause, but I've just published it. It still has a few small bugs, and with <a href=\"https://github.com/Alokxyz1112/hobee\" target=\"_blank\" rel=\"noopener\" style=\"text-decoration:underline\">support on GitHub</a> I'll keep fixing and improving it. I'm in my third year of B.Tech, but the product side is what keeps me going."
   ],
 
   // ---- CONTACT (leave "" to hide) ----
@@ -40,7 +40,7 @@ window.SITE = {
   // ---- WHAT I'M DOING NOW (timeline) ----
   now: [
     { title: "B.Tech Biotechnology", text: "Third year student, exploring bioinformatics as part of biotech." },
-    { title: "AI", text: "Learning by building. One small project at a time." },
+    { title: "Building", text: "Shipping small products and learning what people really need." },
     { title: "My startup", text: "Early days. No name yet. I'm working on it quietly." },
     { title: "Hobee", text: "My Android app. I built it in Flutter and put it on GitHub." }
   ],
