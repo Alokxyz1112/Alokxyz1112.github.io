@@ -494,4 +494,4 @@ header.nav .navav img,header.nav .logo img{width:100%!important;height:100%!impo
 #projects .grid2>div:last-child:nth-child(odd){grid-column:1/-1}
 #typed{white-space:nowrap}
 .hero h1,h1:has(#typed){white-space:nowrap;height:1.1em;min-height:0;overflow:visible}
-@media (max-width:600px){h1:has(#typed){font-size:clamp(24px,7.4vw,32px)}}
+@media (max-width:600px){h1:has(#typed){font-size:clamp(22px,6.6vw,30px)}}

@@ -12,14 +12,14 @@ window.SITE = {
 
   // Lines the headline types out, one after another
   typing: [
-    "Late nights, new apps.",
-    "Always up to something.",
-    "Ideas first, sleep later.",
-    "One commit at a time."
+    "Building what I wish existed.",
+    "Ideas into working apps.",
+    "Always starting new things.",
+    "Apps that feel good to use."
   ],
 
   // One line under your name
-  tagline: "Third year biotech student at ANDUAT Ayodhya. After class, my ideas tend to turn into Flutter apps.",
+  tagline: "Mostly building apps, always learning something new.",
 
   // About section. Each item is one paragraph.
   about: [
@@ -39,7 +39,7 @@ window.SITE = {
 
   // ---- WHAT I'M DOING NOW (timeline) ----
   now: [
-    { title: "B.Tech Biotechnology", text: "Third year at ANDUAT. Genes, cells, code, and a few late nights." },
+    { title: "B.Tech Biotechnology", text: "I make apps that are simple, clean and actually useful." },
     { title: "AI", text: "Learning by building. One small project at a time." },
     { title: "My startup", text: "Early days. No name yet. I'm working on it quietly." },
     { title: "Hobee", text: "My Android app. I built it in Flutter and put it on GitHub." }
