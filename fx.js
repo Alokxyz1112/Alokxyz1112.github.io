@@ -12,9 +12,6 @@
   });
   // Hero parallax layers
   var stage=document.getElementById('stage');
-  if(stage && !touch){ var layers=stage.querySelectorAll('[data-depth]');
-    addEventListener('pointermove',function(e){var dx=e.clientX/innerWidth-.5,dy=e.clientY/innerHeight-.5;
-      layers.forEach(function(l){var d=+l.dataset.depth;l.style.translate=(dx*d)+'px '+(dy*d)+'px';});},{passive:true}); }
   // Scroll depth: sections ease in from slight depth
   var secs=document.querySelectorAll('.section'), tick=false;
   function onScroll(){tick=false;var vh=innerHeight;

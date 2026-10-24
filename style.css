@@ -95,15 +95,15 @@ p.place{color:#d2d2d7!important;font-weight:500;font-size:15px;margin-top:6px}
 /* hero 3D stage */
 .stage{position:relative;width:300px;height:260px;display:grid;place-items:center;margin-bottom:10px;transform-style:preserve-3d}
 .stage .avatar{margin:0;position:relative;z-index:2;transition:transform .3s}
-.orb{position:absolute;border-radius:50%;transition:translate .4s ease-out;animation:float 9s ease-in-out infinite}
-.o1{width:90px;height:90px;top:6px;right:8px;background:radial-gradient(circle at 30% 28%,rgba(255,255,255,.75),rgba(255,90,105,.55) 22%,rgba(140,10,30,.5) 60%,rgba(40,0,10,.2));box-shadow:inset -8px -10px 20px rgba(0,0,0,.35),0 20px 40px -10px rgba(255,59,78,.45);backdrop-filter:blur(6px)}
-.o2{width:56px;height:56px;bottom:20px;left:18px;background:radial-gradient(circle at 30% 28%,rgba(255,255,255,.7),rgba(255,255,255,.12) 30%,rgba(255,255,255,.04));border:1px solid rgba(255,255,255,.2);backdrop-filter:blur(10px);animation-duration:12s;animation-delay:-3s}
-.ring3d{position:absolute;inset:0;display:grid;place-items:center;transform-style:preserve-3d;transition:translate .4s ease-out;pointer-events:none}
-.ring3d i{position:absolute;width:250px;height:250px;border-radius:50%;border:1px solid rgba(255,90,105,.35);box-shadow:0 0 30px -6px rgba(255,59,78,.5);animation:spin 18s linear infinite}
-.ring3d i:nth-child(2){width:230px;height:230px;border-color:rgba(255,255,255,.14);animation-duration:26s;animation-direction:reverse}
-.ring3d i:nth-child(3){width:270px;height:270px;border-color:rgba(255,59,78,.15);animation-duration:34s}
-@keyframes spin{from{transform:rotateX(68deg) rotateZ(0)}to{transform:rotateX(68deg) rotateZ(360deg)}}
-@keyframes float{50%{transform:translateY(-14px)}}
+
+
+
+
+
+
+
+
+
 .icons{display:flex;gap:12px;justify-content:center;margin-top:26px}
 .ico{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;transition:transform .25s,border-color .25s}
 .ico svg{width:20px;height:20px;fill:#e5e5ea;position:relative}
@@ -117,7 +117,7 @@ footer .icons{margin:0 0 16px}
 .badge{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:6px 12px;border-radius:999px;background:rgba(255,59,78,.15);border:1px solid rgba(255,59,78,.4);color:#ff8a96}
 .dot{width:7px;height:7px;border-radius:50%;background:var(--red);box-shadow:0 0 10px var(--red);animation:pulse 1.8s ease-in-out infinite}
 @keyframes pulse{50%{opacity:.35}}
-@media (max-width:700px){.stage{width:240px;height:220px}.ring3d i{width:200px;height:200px}.ring3d i:nth-child(2){width:184px;height:184px}.ring3d i:nth-child(3){width:216px;height:216px}.o1{width:64px;height:64px}.o2{width:40px;height:40px}
+@media (max-width:700px){.stage{width:240px;height:220px}
  .glass{backdrop-filter:blur(18px) saturate(160%);-webkit-backdrop-filter:blur(18px) saturate(160%)}.nav nav a{padding:6px 7px;font-size:12.5px}.nav{gap:4px}}
 @media (prefers-reduced-motion:reduce){.section,.stage{transform:none!important}}
 .build .solo{font-size:16px;color:var(--mute);margin-top:12px}

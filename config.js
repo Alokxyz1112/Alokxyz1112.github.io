@@ -5,7 +5,7 @@
    ========================================================= */
 window.SITE = {
   // Your name as shown on the site
-  name: "Alok Yadav",
+  name: "Yadav Alok",
 
   // Short letters shown in the avatar when there's no photo
   initials: "AY",
