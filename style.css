@@ -253,3 +253,12 @@ footer .icons{margin:0 0 16px}
 @media(min-width:1001px){.sws{flex-wrap:nowrap}.sw{width:34px;height:34px}}
 .heat{max-width:230px;gap:4px}
 .lipic img,.navav img,.logo .navface{object-fit:cover;object-position:center}
+/* Symmetric nav pill */
+header.nav{display:flex;align-items:center;gap:4px;padding:6px;left:50%;right:auto;transform:translateX(-50%);width:max-content}
+header.nav>nav{display:contents}
+header.nav .logo{display:flex;align-items:center;justify-content:center;width:36px;height:36px;flex:0 0 36px;margin:0;gap:0}
+header.nav .navav,header.nav .navface{width:36px;height:36px;border-radius:50%;display:block;box-shadow:0 0 0 1.5px rgba(255,59,78,.8)}
+header.nav>nav>a{display:inline-flex;align-items:center;justify-content:center;height:36px;padding:0 14px;line-height:1;font-size:14px;border-radius:999px;margin:0}
+header.nav>nav>a.navcv{padding:0 16px;font-weight:600}
+@media(max-width:700px){header.nav>nav>a{padding:0 9px;font-size:13px}header.nav>nav>a.navcv{padding:0 12px}}
+@media(max-width:380px){header.nav>nav>a{padding:0 7px;font-size:12.5px}}
