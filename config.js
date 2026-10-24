@@ -54,7 +54,7 @@ window.SITE = {
     {
       name: "Hobee",
       featured: true,
-      text: "I wanted a Reddit gallery with no ads, so I made one. It searches live posts and old archives. It hides duplicate photos. It saves images in full quality. And it has a glass look I really like.",
+      text: "A cleaner way to read Reddit. Not just images, text posts read nicely too. Checking someone's profile? If they post the same thing in ten subreddits, Hobee shows it once, so you actually see what they're about.",
       tags: ["Flutter", "Dart", "Android"],
       link: "https://github.com/Alokxyz1112/hobee",
       extraLink: "https://github.com/Alokxyz1112/hobee/releases/latest",
