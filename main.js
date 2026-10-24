@@ -48,7 +48,6 @@
     if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(text).then(done,fallback);}else fallback();
     function fallback(){var ta=el('textarea');ta.value=text;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');done()}catch(e){showToast('Could not copy')}ta.remove();}
   }
-  var cb=$('contactBtns');
   function link(cls,txt,href,blank,aria){var a=el('a',cls,txt);a.href=href;if(blank){a.target='_blank';a.rel='noopener'}if(aria)a.setAttribute('aria-label',aria);return a;}
   var ICON={mail:'<svg viewBox="0 0 24 24"><path d="M3 6.5A2.5 2.5 0 0 1 5.5 4h13A2.5 2.5 0 0 1 21 6.5v11a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 17.5zm2 .3v.2l7 4.9 7-4.9v-.2a.8.8 0 0 0-.5-.8h-13a.8.8 0 0 0-.5.8zm14 2.6-6.4 4.5a1 1 0 0 1-1.2 0L5 9.4v8.1c0 .3.2.5.5.5h13c.3 0 .5-.2.5-.5z"/></svg>',
     li:'<svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4v10.75H3zm6.5 0h3.8v1.5h.06c.53-1 1.83-1.75 3.44-1.75 3.68 0 4.2 2.2 4.2 5.06v5.94h-4v-5.2c0-1.3-.02-2.9-1.85-2.9-1.86 0-2.15 1.4-2.15 2.8v5.3h-4z"/></svg>',
@@ -58,15 +57,7 @@
     if(S.linkedin){var l=link('ico glass','',S.linkedin,true,'LinkedIn');l.innerHTML=ICON.li;box.appendChild(l);}
     if(S.github){var g=link('ico glass','',S.github,true,'GitHub');g.innerHTML=ICON.gh;box.appendChild(g);} }
   icons($('heroIcons')); icons($('footIcons'));
-  if(S.email){ cb.appendChild(link('btn primary magnetic','Email me','mailto:'+S.email));
-    cb.appendChild(link('btn magnetic','Open in Gmail','https://mail.google.com/mail/?view=cm&fs=1&to='+encodeURIComponent(S.email),true));
-    var mc=el('button','btn magnetic','Copy email');mc.type='button';mc.onclick=function(){copy(S.email,'Email')};cb.appendChild(mc);
-    var ea=link('mailaddr',S.email,'mailto:'+S.email);$('contactText').after(ea);}
-  if(S.linkedin){ cb.appendChild(link('btn magnetic','LinkedIn',S.linkedin,true));
-    var lc=el('button','btn magnetic','Copy LinkedIn');lc.type='button';lc.onclick=function(){copy(S.linkedin,'LinkedIn link')};cb.appendChild(lc);}
-  if(S.github) cb.appendChild(link('btn magnetic','GitHub',S.github,true));
-  if(S.email) $('contactText').textContent='Email is the easiest way to reach me. LinkedIn works too.';
-  else if(!S.linkedin) $('contactText').textContent='You can find me and my code on GitHub.';
+  document.querySelectorAll('[data-copy]').forEach(function(b){b.onclick=function(){copy(b.dataset.copy,b.dataset.label)}});
 
   // Typing headline
   var lines=S.typing&&S.typing.length?S.typing:[S.name||''], typed=$('typed');

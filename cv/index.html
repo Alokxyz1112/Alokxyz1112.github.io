@@ -16,7 +16,7 @@
 <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../style.css?v=7">
+<link rel="stylesheet" href="../style.css?v=8">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -89,6 +89,6 @@ if(matchMedia('(hover: none)').matches)return;var g=document.querySelector('.glo
 addEventListener('pointermove',function(e){g.style.left=e.clientX+'px';g.style.top=e.clientY+'px'},{passive:true});
 document.querySelectorAll('.magnetic').forEach(function(b){b.addEventListener('pointermove',function(e){var q=b.getBoundingClientRect();b.style.transform='translate('+((e.clientX-q.left-q.width/2)*.25)+'px,'+((e.clientY-q.top-q.height/2)*.35)+'px)'});b.addEventListener('pointerleave',function(){b.style.transform=''})});})();
 </script>
-<script src="../fx.js?v=7" defer></script>
+<script src="../fx.js?v=8" defer></script>
 </body>
 </html>
