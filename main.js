@@ -33,6 +33,7 @@
   (S.projects||[]).forEach(function(p){
     var c=el('article','proj glass reveal'+(p.featured?' featured':''));
     if(p.featured) c.appendChild(el('div','label','Featured'));
+    if(p.icon){var ic=new Image();ic.src=p.icon;ic.alt=p.name+' logo';ic.width=56;ic.height=56;ic.loading='lazy';ic.className='picon';c.appendChild(ic);}
     c.appendChild(el('h3',null,p.name)); c.appendChild(el('p',null,p.text));
     var t=el('div','tags'); (p.tags||[]).forEach(function(x){t.appendChild(el('span',null,x))}); c.appendChild(t);
     var l=el('div','links');

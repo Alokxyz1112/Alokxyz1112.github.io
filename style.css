@@ -495,3 +495,4 @@ header.nav .navav img,header.nav .logo img{width:100%!important;height:100%!impo
 #typed{white-space:nowrap}
 .hero h1,h1:has(#typed){white-space:nowrap;height:1.1em;min-height:0;overflow:visible}
 @media (max-width:600px){h1:has(#typed){font-size:clamp(22px,6.6vw,30px)}}
+.proj .picon{width:56px;height:56px;border-radius:14px;margin-bottom:14px;display:block}

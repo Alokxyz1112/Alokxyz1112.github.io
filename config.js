@@ -61,6 +61,15 @@ window.SITE = {
       extraLabel: "Download APK"
     },
     {
+      name: "Pixelfixo",
+      icon: "assets/pixelfixo-logo.webp?v=1",
+      text: "Makes blurry photos sharp again, right on your phone. 2x, 3x or 4x upscaling that works offline, keeps colours natural, and has no ads, no account and no limits.",
+      tags: ["Android", "Open source"],
+      link: "https://github.com/Alokxyz1112/pixelfixo",
+      extraLink: "https://github.com/Alokxyz1112/pixelfixo/releases/tag/v1.0.1",
+      extraLabel: "Download APK"
+    },
+    {
       name: "biofx_python",
       text: "My fork of the code from Mastering Python for Bioinformatics. It's where I practise biology with Python.",
       tags: ["Python", "Bioinformatics"],
