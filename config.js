@@ -53,6 +53,7 @@ window.SITE = {
   projects: [
     {
       name: "Hobee",
+      icon: "assets/hobee-logo.webp?v=1",
       featured: true,
       text: "A cleaner way to read Reddit. Not just images, text posts read nicely too. Checking someone's profile? If they post the same thing in ten subreddits, Hobee shows it once, so you actually see what they're about.",
       tags: ["Flutter", "Dart", "Android"],
